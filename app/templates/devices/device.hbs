@@ -1,0 +1,28 @@
+<div class="container">
+  {{search-form action="search"}}
+
+  <div class="row">
+    <div class="container">
+      {{#each devices as |device|}}
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{device.DeviceName}}</h3>
+            </div>
+            <div class="panel-body">
+              <p>Brand : {{device.Brand}}</p>
+              <p>Technology : {{device.technology}}</p>
+              <p>GPRS : {{device.gprs}}</p>
+              <p>Edge : {{device.edge}}</p>
+              <p>
+                Camera: {{device.camera}}
+              </p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+</div>
+{{outlet}}
