@@ -1,1 +1,23 @@
 @import "bootstrap";
+html {
+  overflow-y: scroll;
+}
+.device {
+  min-height: 350px;
+}
+.device {
+  -webkit-transition-duration: .25s;
+  &:hover {
+    opacity: 1 !important;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+    -webkit-transform: translate(0, -4px);
+    z-index: 999;
+  }
+}
+.navbar {
+  border-radius: 0px
+}
+
+.hide {
+  visibility: hidden;
+}

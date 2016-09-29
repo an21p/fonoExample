@@ -1,22 +1,33 @@
 <div class="container">
   {{search-form action="search"}}
-
+  <h2>Devices Found <span class="badge badge-success">{{devices.length}}</span></h2>
+  <br>
+  <div class="row">
+    <div class="container">
+      <div class="btn-group">
+        <button class="btn" {{action 'toggleBrand'}}>Brand</button>
+        <button class="btn" {{action 'toggleTech'}}>Technology</button>
+        <button class="btn" {{action 'toggleGPRS'}}>GPRS</button>
+        <button class="btn" {{action 'toggleEDGE'}}>EDGE</button>
+        <button class="btn" {{action 'toggleCamera'}}>Camera</button>
+      </div>
+    </div>
+  </div>
+  <br>
   <div class="row">
     <div class="container">
       {{#each devices as |device|}}
         <div class="col-sm-4">
-          <div class="panel panel-default">
+          <div class="device panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">{{device.DeviceName}}</h3>
             </div>
             <div class="panel-body">
-              <p>Brand : {{device.Brand}}</p>
-              <p>Technology : {{device.technology}}</p>
-              <p>GPRS : {{device.gprs}}</p>
-              <p>Edge : {{device.edge}}</p>
-              <p>
-                Camera: {{device.camera}}
-              </p>
+              <p class="{{if brandIsHidden "hide" "show"}}">Brand : {{device.Brand}}</p>
+              <p class="{{if techIsHidden "hide" "show"}}">Technology : {{device.technology}}</p>
+              <p class="{{if gprsIsHidden "hide" "show"}}">GPRS : {{device.gprs}}</p>
+              <p class="{{if edgeIsHidden "hide" "show"}}">Edge : {{device.edge}}</p>
+              <p class="{{if cameraIsHidden "hide" "show"}}">Camera : {{device.camera}}</p>
             </div>
           </div>
         </div>
