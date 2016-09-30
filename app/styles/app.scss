@@ -3,7 +3,7 @@ html {
   overflow-y: scroll;
 }
 .device {
-  min-height: 350px;
+  //min-height: 350px;
 }
 .device {
   -webkit-transition-duration: .25s;
@@ -20,4 +20,8 @@ html {
 
 .hide {
   visibility: hidden;
+}
+
+.view-buttons .btn {
+  margin-bottom: 2% !important;
 }

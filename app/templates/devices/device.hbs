@@ -3,13 +3,13 @@
   <h2>Devices Found <span class="badge badge-success">{{devices.length}}</span></h2>
   <br>
   <div class="row">
-    <div class="container">
-      <div class="btn-group">
-        <button class="btn" {{action 'toggleBrand'}}>Brand</button>
-        <button class="btn" {{action 'toggleTech'}}>Technology</button>
-        <button class="btn" {{action 'toggleGPRS'}}>GPRS</button>
-        <button class="btn" {{action 'toggleEDGE'}}>EDGE</button>
-        <button class="btn" {{action 'toggleCamera'}}>Camera</button>
+    <div class="container view-buttons">
+      <div class="col-xs-12">
+          <button class="btn {{if brandIsHidden "btn-danger" "btn-success"}}" {{action 'toggleBrand'}}>Brand</button>
+          <button class="btn {{if techIsHidden "btn-danger" "btn-success"}}" {{action 'toggleTech'}}>Techn</button>
+          <button class="btn {{if gprsIsHidden "btn-danger" "btn-success"}}" {{action 'toggleGPRS'}}>GPRS</button>
+          <button class="btn {{if edgeIsHidden "btn-danger" "btn-success"}}" {{action 'toggleEDGE'}}>EDGE</button>
+          <button class="btn {{if cameraIsHidden "btn-danger" "btn-success"}}" {{action 'toggleCamera'}}>Camera</button>
       </div>
     </div>
   </div>
